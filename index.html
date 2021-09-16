@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kimgeonu</title>
+</head>
+<body>  <!-- style="overflow-x: hidden" -->
+
+    <div class="container_loader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <h2>Loading</h2>
+        </div>
+    </div>
+
+    <div class="none">
+        <div class="nav">
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <section>
+            <!-- <header>
+                <div class="icon">
+                    <i class="fas fa-plus" onclick="click_eve()"></i>  
+                </div>
+                <div class="icon_close">
+                    <i class="fas fa-minus" onclick="click_eve_close()"></i> 
+                </div>
+                <nav class="nav">                    
+                    <div class="navgation_icon">
+                        <ul class="Menu">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>     
+                        <ul class="Menu_icon">
+                            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        </ul>           
+                    </div>
+                </nav>
+            </header> -->
+        </section>
+
+        <section class="main">
+            <div class="hi_eng">
+                <h2>Hello!</h2>
+            </div>
+            <div class="hi_jap">
+                <h2>こんにちは</h2>
+            </div>
+            <div class="hi_russia">
+                <h2>Привет</h2>
+            </div>
+            <div class="hi1">
+                <i class="far fa-hand-paper"></i>
+            </div>
+            <div class="hi_kor">
+                <h2>안녕하세요</h2>
+            </div>
+            <a href="#" class="btn">더보기</a>
+            
+            <hr class="hr1">
+        </section>
+
+        <section>
+            <div class="About">
+                <h2>ABOUT</h2>
+                <p>안녕하세요 <span>성장하는</span>  웹 퍼블리셔 김건우입니다. </p>
+            </div>
+            <img src="img/code-1076536_1920.jpg" alt="codeimg" class="img1">
+            <div class="introduce">
+                <p>스펀지 같은 개발자를 꿈꾸고 있습니다. <br>
+                어떤 상황, 어떤 환경에서든지 뭐든지 잘 흡수하겠습니다</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="html" onmouseover="html_click()" onmouseout="html_unclick()">HTML</div>
+            <div class="html_underbox">
+
+
+            </div>
+            <div class="css" onmouseover="css_click()" onmouseout="css_unclick()">CSS</div>
+            <div class="css_underbox">
+
+
+            </div>
+            <div class="js" onmouseover="js_click()" onmouseout="js_unclick()">JavaScripts</div>
+            <div class="js_underbox">
+
+
+            </div>
+            <div class="react" onmouseover="react_click()" onmouseout="react_unclick()">React</div>
+            <div class="react_underbox">
+
+
+            </div>
+        </section>
+
+        <section class="Portfolio">
+            <h2>Portfolio</h2>
+            <hr class="oneline">
+            <div class="one"> <!-- 이미지 호버 효과 주기 -->
+                <span>동아리 웹 사이트</span>  </a>
+                <a href="#"><img src="img/clubwebjpg.PNG" alt="codeimg" class="img1"></a>
+            </div>
+            <div class="onebtn"><p>자세히 보기</p> </div>
+            <hr class="twoline">
+            <div class="two"> <!-- 이미지 호버 효과 주기 -->
+                <a href="#"><img src="img/code-1076536_1920.jpg" alt="codeimg" class="img1"></a>
+                <span>웹 표준 사이트</span>
+                <div class="text-container">
+                    <h2>PortfolioPortfolioPortfolioPortfolioPortfolio</h2>
+                </div>
+            </div>
+            <hr class="thrline">
+            <div class="thr"> <!-- 이미지 호버 효과 주기 -->
+                <span>Clone Sites</span>
+                <a href="#"><img src="img/code-1076536_1920.jpg" alt="codeimg" class="img1"></a>
+            </div>
+            <hr class="forline">
+            <div class="fou"> 
+                <span>CSS Animation</span><!-- 이미지 슬라이드 효과 주기 -->
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <hr class="fivline">
+        </section>
+
+        <section>
+            <div class="contact">
+                <h2>Contact Me!!</h2>
+                <!-- <input type="text" class="textbox"> -->
+                <p>안녕하세요 잘 부탁 드립니다!</p>
+                <div class="emailicon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <p class="email">
+                    (1) kgwoo1025@naver.com <br> 
+                    (2) kinkunwoo1025@gmail.com
+                </p>
+                <div class="tellicon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <p class="phonenumber">010-7474-7412</p>
+            </div>
+        </section>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script>
+        // loding
+        $(window).on('load', function(){
+            setInterval(function(){
+                $('#loading').fadeOut(350);
+                $('.content').addClass('active');
+            }, 2000);
+        });
+    </script>
+    <script>
+        // loding
+        
+        // var showPage = function() {
+        //     var loader = $("div.loader"); 
+        //     var container = $("div.container"); 
+        //     // document.querySelector('.loder').style.display = 'none';
+        //     loader.css("display","none"); 
+        //     // document.querySelector('.container').style.display = 'block';
+        //     container.css("display","block"); 
+        // };
+
+        // 참조자 생성
+        const Menu = document.querySelector('.navgation_icon i');
+        const showMenu = document.querySelector('.Menu li');
+        const clickmenu = document.getElementsByClassName(".nav");
+
+        function click_eve() {
+            document.querySelector('.nav').style.display = 'block';
+            document.querySelector('.icon').style.display = 'none';
+            document.querySelector('.icon_close i').style.display = 'block';
+        }
+        function click_eve_close() {
+            document.querySelector('.icon').style.display = 'block';
+            document.querySelector('.icon_close i').style.display = 'none';
+            document.querySelector('.nav').style.display = 'none';
+        }
+
+        function html_click() {
+            document.querySelector('.html_underbox').style.display = 'block';
+        }
+        function html_unclick() {
+            document.querySelector('.html_underbox').style.display = 'none';
+        }
+
+        function css_click() {
+            document.querySelector('.css_underbox').style.display = 'block';
+        }
+        function css_unclick() {
+            document.querySelector('.css_underbox').style.display = 'none';
+        }
+
+        function js_click() {
+            document.querySelector('.js_underbox').style.display = 'block';
+        }
+        function js_unclick() {
+            document.querySelector('.js_underbox').style.display = 'none';
+        }
+        
+        function react_click() {
+            document.querySelector('.react_underbox').style.display = 'block';
+        }
+        function react_unclick() {
+            document.querySelector('.react_underbox').style.display = 'none';
+        }
+    </script>
+
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/4881dadbfc.js" crossorigin="anonymous"></script>
+</body>
+</html>
